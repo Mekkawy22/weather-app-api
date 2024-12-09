@@ -28,7 +28,7 @@ function displayWeather(data) {
                     <p>${day.day.condition.text}</p>
                     <i class="fas ${getIconClass(day.day.condition.text)} fa-3x"></i>
                     <p>Wind: ${day.day.maxwind_kph} km/h <i class="fas fa-wind fa-2x"></i></p>
-                    p>Humidity: ${day.day.avghumidity}% <i class="fas fa-tint fa-2x"></i></p>
+                    <p>Humidity: ${day.day.avghumidity}% <i class="fas fa-tint fa-2x"></i></p>
                 </div>
             </div>
         `;
