@@ -1,0 +1,53 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header */
+.header-dark {
+    background: #1c1e21;
+    padding: 10px 0;
+}
+
+
+/* Hero Section */
+.hero-dark {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('../images/banner.png') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-dark .search-form input {
+    height: 50px;
+    border: none;
+    padding: 0 10px;
+}
+
+/* Weather Section */
+.weather-section h2 {
+    font-weight: 700;
+    color: #555;
+}
+
+/* Weather Card */
+.weather-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer-dark {
+    background: #1c1e21;
+    color: #fff;
+}
+

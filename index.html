@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather Forecast App">
+    <meta name="keywords" content="weather, forecast, weather api">
+    <meta name="author" content="Mahmoud Mekkawy">
+    <title>Weather Forecast</title>
+    <link rel="icon" href="./images/cloud_14407648.png">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-dark">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a href="/" class="logo d-flex align-items-center text-decoration-none text-light">
+                <img src="images/logo.png" alt="Logo" class="me-3" style="height: 60px;">
+                <h1 class="m-0 text-light">WeatherPro</h1>
+            </a>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-dark text-white text-center position-relative">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container py-5 position-relative">
+            <h1 class="display-4 fw-bold mb-3">Your Weather Companion</h1>
+            <p class="mb-4 lead">Get accurate weather updates wherever you are.</p>
+            <form class="search-form row justify-content-center">
+                <div class="col-md-6">
+                    <input type="text" class="form-control rounded-pill" placeholder="Enter your location..." id="search">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary px-4 rounded-pill" id="submit">Find</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Weather Forecast Section -->
+    <section class="weather-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Weather Forecast</h2>
+            <div class="row" id="weatherCards">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-dark py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-6">
+                    <h5>Subscribe for Updates</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2 rounded-pill" placeholder="Enter your email...">
+                        <button class="btn btn-primary rounded-pill">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+ 
+</body>
+
+</html>
