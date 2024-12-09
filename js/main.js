@@ -20,15 +20,17 @@ function displayWeather(data) {
         var day = data.forecast.forecastday[i];
         cartona += `
             <div class="col-12 col-md-4">
-                <div class="weather-card m-2 text-center bg-dark text-light p-3 shadow-lg">
-                    <h2>${data.location.name}</h2>
-                    <h4>${new Date(day.date).toLocaleDateString('en-US', { weekday: 'long' })}</h4>
-                    <p>${formatDate(day.date)}</p>
-                    <h3>${day.day.avgtemp_c}°C</h3>
-                    <p>${day.day.condition.text}</p>
-                    <i class="fas ${getIconClass(day.day.condition.text)} fa-3x"></i>
-                    <p>Wind: ${day.day.maxwind_kph} km/h <i class="fas fa-wind fa-2x"></i></p>
-                    <p>Humidity: ${day.day.avghumidity}% <i class="fas fa-tint fa-2x"></i></p>
+                <div class="weather-card m-2 text-center p-4 shadow-sm rounded bg-light text-dark">
+                    <h2 class="mb-3">${data.location.name}</h2>
+                    <h4 class="mb-1 text-secondary">${new Date(day.date).toLocaleDateString('en-US', { weekday: 'long' })}</h4>
+                    <p class="mb-3">${formatDate(day.date)}</p>
+                    <h3 class="display-4 mb-3">${day.day.avgtemp_c}°C</h3>
+                    <p class="lead">${day.day.condition.text}</p>
+                    <i class="fas ${getIconClass(day.day.condition.text)} fa-3x my-3"></i>
+                    <div class="d-flex justify-content-between mt-3">
+                        <p class="m-0"><i class="fas fa-wind fa-2x text-info"></i> ${day.day.maxwind_kph} km/h</p>
+                        <p class="m-0"><i class="fas fa-tint fa-2x text-primary"></i> ${day.day.avghumidity}%</p>
+                    </div>
                 </div>
             </div>
         `;
@@ -46,7 +48,7 @@ function formatDate(date) {
 function getIconClass(conditionText) {
     conditionText = conditionText.toLowerCase().trim();
     if (conditionText.includes("sunny")) return "fa-sun text-warning";
-    if (conditionText.includes("cloud")) return "fa-cloud text-light";
+    if (conditionText.includes("cloud")) return "fa-cloud text-secondary";
     if (conditionText.includes("rain")) return "fa-cloud-rain text-primary";
     if (conditionText.includes("thunder")) return "fa-bolt text-danger";
     return "fa-cloud-sun text-info";
